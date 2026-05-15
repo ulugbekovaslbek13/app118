@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: sans-serif; background: #1a1a2e; color: white; text-align: center; padding-top: 50px; }
+        .card { background: #16213e; padding: 20px; border-radius: 15px; display: inline-block; border: 1px solid #0f3460; }
+        button { background: #e94560; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Xiva Ob-havosi</h2>
+        <p id="temp">Harorat: +22°C</p>
+        <p id="desc">Havo: Musaffo</p>
+        <button onclick="update()">Yangilash</button>
+    </div>
+
+    <script>
+        function update() {
+            const temps = [20, 22, 25, 18, 28];
+            const randomTemp = temps[Math.floor(Math.random() * temps.length)];
+            document.getElementById('temp').innerText = "Harorat: +" + randomTemp + "°C";
+            alert("Ma'lumot yangilandi!");
+        }
+    </script>
+</body>
+</html>
